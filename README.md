@@ -19,9 +19,9 @@ D (differential) component counteracts the P component's tendency to oscillate a
 
 I (integral) component counteracts a bias in the CTE which prevents the P-D controller from reaching the center line. This bias can take several forms, such as a steering drift, however for this project work this component particularly serves to reduce the CTE around curves.
 
-####### Here is the video with PID:
+###### Here is the video with PID:
 
-####### Here is video with PD: (A very slight difference observed)
+###### Here is video with PD: (A very slight difference observed)
 
 
 -------
