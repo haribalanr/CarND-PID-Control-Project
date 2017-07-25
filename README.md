@@ -1,13 +1,13 @@
 # CarND-Controls-PID
 Self-Driving Car Engineer Nanodegree Program
 ------
-Overview:
+#### Overview:
 
 This work was performed as part of the Udacity Self-Driving car Engineer nano degree program. Project work involved building a PID controller and tune its hyperparameters by applying the general processing flow and test it against the simulator. The simulator provides cross-track error (CTE), speed, and steering angle data via local websocket. The PID program responds with steering and throttle commands to drive the car reliably around the simulator track without crashing.
 
-PID/Proportional Integral Differential.
+#### PID/Proportional Integral Differential.
 
-Tuning Hyper Parameters:
+##### Tuning Hyper Parameters:
 
 I first started playing with hyperparameters manually, and took reference from the course work as well. I also employed the processo of Twiddle, where we programmatically, tune the hyperparameter on a loop based on the feedback (dp). However, initial runs directly using twiddle process did not succeed and resulted in car leaving truck and crash. After bunch of manual tries, (and some twiddle) was able to get the car around the track reliably meaning arriving at a resonable hyperparams. Later, I employed twiddle interatively to get better results. I felt it necessary to complete a full lap with each change in parameter because it was the only way to get a decent "score" (total error) for the parameter set. For this reason my parameter changes are allowed to set in for 100 steps and are then evaluated for 2000. I allowed Twiddle to continue for over 1 million steps (or roughly 400-500 trips around the track) to fine tune the parameters to their final values (P: 0.1346, I: 0.0002707, D: 3.053).
 
@@ -19,9 +19,9 @@ D (differential) component counteracts the P component's tendency to oscillate a
 
 I (integral) component counteracts a bias in the CTE which prevents the P-D controller from reaching the center line. This bias can take several forms, such as a steering drift, however for this project work this component particularly serves to reduce the CTE around curves.
 
-Here is the video with PID:
+####### Here is the video with PID:
 
-Here is video with PD: (A very slight difference observed)
+####### Here is video with PD: (A very slight difference observed)
 
 
 -------
