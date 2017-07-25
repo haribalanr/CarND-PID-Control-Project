@@ -21,8 +21,7 @@ I (integral) component counteracts a bias in the CTE which prevents the P-D cont
 
 ###### Here is the video with PID:
 
-###### Here is video with PD: (A very slight difference observed)
-
+https://youtu.be/kPjErmfzpy0
 
 -------
 
